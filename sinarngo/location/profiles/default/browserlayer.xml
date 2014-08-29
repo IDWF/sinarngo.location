@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<layers>
+    <layer name="sinarngo.location"
+        interface="sinarngo.location.interfaces.IProductSpecific" />
+</layers>
