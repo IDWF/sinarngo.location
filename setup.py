@@ -35,6 +35,7 @@ setup(name='sinarngo.location',
           'plone.multilingualbehavior',
           'plone.app.versioningbehavior',
           'five.pt',
+          'ploneun.vocabulary',
           # -*- Extra requirements: -*-
       ],
       extras_require={
