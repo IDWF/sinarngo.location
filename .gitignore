@@ -6,3 +6,4 @@ var/
 bin/
 develop-eggs/
 .installed.cfg
+*.swp
