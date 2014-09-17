@@ -5,3 +5,4 @@ Changelog
 ---------------------
 
  - Initial package generated using inigo.templer
+ - Add indexer, collection criteria and behaviour for Related Countries
