@@ -21,6 +21,8 @@
         name="sinarngo.location"
         directory="static"/>
 
+    <adapter factory=".indexer.regions" name="regions" />
+
     <!-- -*- extra stuff goes here -*- -->
 
 </configure>

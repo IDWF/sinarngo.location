@@ -9,8 +9,8 @@ Features
 
 Related Countries, index and behavior for dexterity.
 
-Credit
-------
+Credits
+-------
 
 Initial funding by ILO PROMOTE project
 http://www.ilo.org/jakarta/whatwedo/projects/WCMS_210965/lang--en/index.htm
