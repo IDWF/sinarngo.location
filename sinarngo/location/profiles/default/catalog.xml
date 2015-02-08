@@ -4,5 +4,13 @@
         <indexed_attr value="related_countries" />
     </index>
     <column value="related_countries" />
+    <index name="un_regions" meta_type="KeywordIndex">
+        <indexed_attr value="un_regions" />
+    </index>
+    <column value="un_regions" />
+    <index name="un_subregions" meta_type="KeywordIndex">
+        <indexed_attr value="un_subregions" />
+    </index>
+    <column value="un_subregions" />
 </object>
 

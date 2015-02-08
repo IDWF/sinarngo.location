@@ -12,6 +12,10 @@ from Products.CMFCore.interfaces import IContentish
 @indexer(IContentish)
 def regions(obj):
 
+    #FIXME These mappings should be extracted into reusable CSV files.
+    #Then converted into check/lookup functions from those files.
+    #http://unstats.un.org/unsd/methods/m49/m49regin.htm
+    
     africa = ['DZ','AO','BJ','BW','BF','BI','CM','CV','CF','TD',
               'KM','CD','CG','DJ','EG','GQ','ER','ET','GA','GM',
               'GH','GN','GW','CI','KE','LS','LR','LY','MG','MW',
@@ -19,23 +23,37 @@ def regions(obj):
               'SC','SL','SO','ZA','SS','SD','SZ','TZ','TG','TN',
               'UG','ZM','ZW']
 
-    #FIXME Pacific needs to be extracted out.
-
+    #missing middle-east, central asia
     asia = ['AF','BD','BT','KH','CN','KP','ID','IN','IR',
             'LA','MY','MV','MN','MM','NP','PK','PH',
             'LK','TH','TL','VN']
 
+    oceania = ['AU','NZ','NF','FJ','NC','PG','SB','VU','GU',
+               'KI','FM','NR','MP','PW','AS','CK','PF','NU',
+               'PN','WS','TK','TO','TV','WF']
+
+    europe = ['BY','BG','CZ','HU','PL','MD','RO','RU','SK','UA',
+              'AX','DK','EE','FO','FI','GG','IS','IE','IM','JE',
+              'LV','LT','NO','SJ','SE','UK',
+              'AL','AD','BA','HR','GI','GR','VA','IT','MT','ME',
+              'PT','SM','RS','SI','ES','MK',
+              'AT','BE','FR','DE','LI','LU''MC','NL','CH']
 
     latinamerica_carib = ['AI','AG','AW','BS','BB','BQ','VG',
                           'KY','CU','CW','DM','DO','GD','GP',
                           'HT','JM','MQ','MS','PR','BL','KN',
-                          'LC','MF','VC','SX','TT','TC','VI']
+                          'LC','MF','VC','SX','TT','TC','VI',
+                          'BZ','CR','SV','GT','HN','MX','NI',
+                          'PA',
+                          'AR','BO','BR','CL','CO','EC',
+                          'FK','GF','PY','PE','SR','UY',
+                          'VE']
 
-    #FIXME Needs rest of latin america
-
+    northern_america = ['BM','CA','GL','PM','US']
+    
     regions = []
     
-    #FIXME really should be rewritten better
+    #FIXME 
 
     if obj.related_countries is not None:
 
@@ -59,6 +77,26 @@ def regions(obj):
                     if item in asia:
                         regions.append('142')
 
+        if '009' in regions:
+            pass
+        else:
+            for item in obj.related_countries:
+                if '009' in regions:
+                    pass
+                else:
+                    if item in oceania:
+                        regions.append('009')
+
+        if '150' in regions:
+            pass
+        else:
+            for item in obj.related_countries:
+                if '150' in regions:
+                    pass
+                else:
+                    if item in europe:
+                        regions.append('150')
+
         if '419' in regions:
             pass
         else:
@@ -69,6 +107,39 @@ def regions(obj):
                     if item in latinamerica_carib:
                         regions.append('419')
 
+        if '021' in regions:
+            pass
+        else:
+            for item in obj.related_countries:
+                if '021' in regions:
+                    pass
+                else:
+                    if item in northern_america:
+                        regions.append('021')
 
     return regions
 
+@indexer(IContentish)
+def subregions(obj):
+    
+    caribbean =  ['AI','AG','AW','BS','BB','BQ','VG',
+                  'KY','CU','CW','DM','DO','GD','GP',
+                  'HT','JM','MQ','MS','PR','BL','KN',
+                  'LC','MF','VC','SX','TT','TC','VI',
+                  ]
+
+    subregions = []
+
+    if obj.related_countries is not None:
+
+        if '029' in subregions:
+            pass
+        else:
+            for item in obj.related_countries:
+                if '029' in subregions:
+                    pass
+                else:
+                    if item in caribbean:
+                        subregions.append('029')
+
+    return subregions
