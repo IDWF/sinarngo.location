@@ -5,8 +5,7 @@ from sinarngo.location.vocabulary import resolve_value
 from zope.interface import Interface
 from five import grok
 
-from sinarngo.location.behavior.relatedcountries import \
-IRelatedCountries
+from sinarngo.location.behavior.relatedcountries import IRelatedCountries
 from Products.CMFCore.interfaces import IContentish
 
 @indexer(IContentish)
@@ -24,7 +23,7 @@ def regions(obj):
               'UG','ZM','ZW']
 
     #missing middle-east, central asia
-    asia = ['AF','BD','BT','KH','CN','KP','ID','IN','IR',
+    asia = ['AF','BD','BT','CN','HK,'KH','KP','KR','ID','IN','IR',
             'LA','MY','MV','MN','MM','NP','PK','PH',
             'LK','TH','TL','VN']
 
@@ -48,6 +47,11 @@ def regions(obj):
                           'AR','BO','BR','CL','CO','EC',
                           'FK','GF','PY','PE','SR','UY',
                           'VE']
+
+    latinamerica = ['BZ','CR','SV','GT','HN','MX','NI',
+                    'PA',
+                    'AR','BO','BR','CL','CO','EC','FK',
+                    'GF','GY','PY','PE','SR','UY','VE']
 
     northern_america = ['BM','CA','GL','PM','US']
     
@@ -106,6 +110,17 @@ def regions(obj):
                 else:
                     if item in latinamerica_carib:
                         regions.append('419')
+        
+        # code 419a below is not official
+        if '419a' in regions:
+             pass
+        else:
+            for item in obj.related_countries:
+                if '419a' in regions:
+                     pass
+                else:
+                    if item in latinamerica:
+                        regions.append('419a')
 
         if '021' in regions:
             pass
