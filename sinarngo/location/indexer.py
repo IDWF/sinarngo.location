@@ -23,7 +23,7 @@ def regions(obj):
               'UG','ZM','ZW']
 
     #missing middle-east, central asia
-    asia = ['AF','BD','BT','CN','HK,'KH','KP','KR','ID','IN','IR',
+    asia = ['AF','BD','BT','CN','HK','JP','KH','KP','KR','ID','IN','IR',
             'LA','MY','MV','MN','MM','NP','PK','PH',
             'LK','TH','TL','VN']
 
@@ -111,7 +111,7 @@ def regions(obj):
                     if item in latinamerica_carib:
                         regions.append('419')
         
-        # code 419a below is not official
+        # code 419a below is not official UN code
         if '419a' in regions:
              pass
         else:
