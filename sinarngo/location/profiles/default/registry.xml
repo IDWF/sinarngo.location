@@ -4,7 +4,7 @@
     <value key="title">Related Countries</value>
     <value key="description">Related Countries</value>
     <value key="enabled">True</value>
-    <value key="sortable">True</value>
+    <value key="sortable">False</value>
     <value key="operations">
         <element>plone.app.querystring.operation.selection.is</element>
     </value>
