@@ -22,10 +22,14 @@ def regions(obj):
               'SC','SL','SO','ZA','SS','SD','SZ','TZ','TG','TN',
               'UG','ZM','ZW']
 
-    #missing middle-east, central asia
-    asia = ['AF','BD','BT','CN','HK','JP','KH','KP','KR','ID','IN','IR',
-            'LA','MY','MV','MN','MM','NP','PK','PH',
-            'LK','TH','TL','VN']
+    asia = [
+           #Eastern Asia
+           'CN','HK','MO','KP','JP','MN','KR',
+           #Southern Asia
+           'AF','BD','BT','IN','IR','MV','NP','PK','LK',
+           #Southeast Asia
+           'BN','KH','ID','LA','MY','MM','PH','SG','TH','TL','VN'
+           ]
 
     oceania = ['AU','NZ','NF','FJ','NC','PG','SB','VU','GU',
                'KI','FM','NR','MP','PW','AS','CK','PF','NU',
