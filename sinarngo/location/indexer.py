@@ -28,7 +28,9 @@ def regions(obj):
            #Southern Asia
            'AF','BD','BT','IN','IR','MV','NP','PK','LK',
            #Southeast Asia
-           'BN','KH','ID','LA','MY','MM','PH','SG','TH','TL','VN'
+           'BN','KH','ID','LA','MY','MM','PH','SG','TH','TL','VN',
+           #West Asia
+           'LB'
            ]
 
     oceania = ['AU','NZ','NF','FJ','NC','PG','SB','VU','GU',
@@ -37,7 +39,7 @@ def regions(obj):
 
     europe = ['BY','BG','CZ','HU','PL','MD','RO','RU','SK','UA',
               'AX','DK','EE','FO','FI','GG','IS','IE','IM','JE',
-              'LV','LT','NO','SJ','SE','UK',
+              'LV','LT','NO','SJ','SE','UK','GB',
               'AL','AD','BA','HR','GI','GR','VA','IT','MT','ME',
               'PT','SM','RS','SI','ES','MK',
               'AT','BE','FR','DE','LI','LU''MC','NL','CH']
