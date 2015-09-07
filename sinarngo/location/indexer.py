@@ -30,7 +30,7 @@ def regions(obj):
            #Southeast Asia
            'BN','KH','ID','LA','MY','MM','PH','SG','TH','TL','VN',
            #West Asia
-           'LB'
+           'AE','BH','KW','LB','OM','QA','SA'
            ]
 
     oceania = ['AU','NZ','NF','FJ','NC','PG','SB','VU','GU',
